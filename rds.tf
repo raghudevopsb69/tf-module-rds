@@ -23,13 +23,13 @@ resource "aws_rds_cluster" "rds" {
   db_subnet_group_name    = aws_db_subnet_group.rds.name
 }
 
-resource "aws_rds_cluster_instance" "cluster_instances" {
-  count              = var.instance_count
-  identifier         = "${var.env}-rds-node-${count.index + 1}"
-  cluster_identifier = aws_rds_cluster.rds.id
-  instance_class     = var.instance_class
-  engine             = var.engine
-  engine_version     = var.engine_version
-}
+//resource "aws_rds_cluster_instance" "cluster_instances" {
+//  count              = var.instance_count
+//  identifier         = "${var.env}-rds-node-${count.index + 1}"
+//  cluster_identifier = aws_rds_cluster.rds.id
+//  instance_class     = var.instance_class
+//  engine             = var.engine
+//  engine_version     = var.engine_version
+//}
 
 
